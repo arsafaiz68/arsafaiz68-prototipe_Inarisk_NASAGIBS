@@ -1,0 +1,80 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html,
+body,
+#root {
+  height: 100%;
+  margin: 0;
+}
+body {
+  @apply bg-slate-100 font-sans text-slate-800 antialiased;
+}
+
+.scroll-thin {
+  scrollbar-width: thin;
+  scrollbar-color: #cbd5e1 transparent;
+}
+
+/* ---------- Leaflet ---------- */
+.leaflet-container {
+  @apply bg-slate-200 font-sans;
+}
+.leaflet-control-attribution {
+  @apply rounded-tl-md !bg-white/85 px-2 text-[10px] text-slate-500;
+}
+.leaflet-control-scale {
+  margin-bottom: 26px !important;
+}
+.leaflet-control-scale-line {
+  @apply border-slate-600 bg-white/85 text-[10px] text-slate-700;
+}
+.leaflet-popup-content-wrapper {
+  @apply rounded-lg p-0 shadow-panel;
+}
+.leaflet-popup-content {
+  @apply m-0 text-[12px] leading-snug text-slate-700;
+}
+.leaflet-container a.leaflet-popup-close-button {
+  @apply right-1 top-1 text-slate-400;
+}
+
+/* Popup identifikasi */
+.identify-popup .leaflet-popup-content { width: 290px !important; }
+.id-head { @apply rounded-t-lg bg-navy-900 px-3 py-2.5 pr-7 text-white; }
+.id-title { @apply text-[12.5px] font-semibold; }
+.id-coord { @apply mt-0.5 font-mono text-[11px] text-navy-100; }
+.id-coord-sub { @apply text-[10.5px] text-navy-200; }
+.id-section { @apply border-b border-slate-100 px-3 py-2; }
+.id-section-title { @apply mb-1 text-[10px] font-semibold uppercase tracking-wider text-slate-500; }
+.id-table { @apply w-full border-collapse text-[11.5px]; }
+.id-table th { @apply pb-1 text-left text-[10px] font-medium text-slate-400; }
+.id-table td { @apply border-t border-slate-100 py-1 pr-1 align-middle; }
+.id-val { @apply text-right font-mono tabular-nums text-slate-800; }
+.id-class { @apply inline-block min-w-[52px] rounded px-1.5 py-px text-center text-[10px] font-semibold text-black/80; }
+.id-err { @apply text-red-600; }
+.id-gibs { @apply py-0.5 text-[11.5px] text-slate-700; }
+.id-hint { @apply px-3 py-2.5 text-[11.5px] text-slate-500; }
+.id-loading { @apply flex items-center gap-2 px-3 py-3 text-[11.5px] text-slate-500; }
+.id-src { @apply px-3 py-1.5 text-[10px] text-slate-400; }
+.spinner {
+  @apply inline-block h-3.5 w-3.5 animate-spin rounded-full border-2 border-navy-200 border-t-navy-600;
+}
+
+/* Popup kejadian bencana */
+.event-popup .leaflet-popup-content { width: 320px !important; }
+.ev-popup { @apply max-h-[380px] overflow-y-auto; scrollbar-width: thin; }
+.ev-head { @apply border-l-4 bg-slate-50 px-3 py-2.5 pr-7; }
+.ev-badge { @apply inline-block rounded px-1.5 py-px text-[10px] font-semibold uppercase tracking-wide text-white; }
+.ev-title { @apply mt-1 text-[14px] font-semibold text-navy-900; }
+.ev-date { @apply text-[11px] text-slate-500; }
+.ev-stats { @apply grid grid-cols-3 gap-px border-y border-slate-100 bg-slate-100; }
+.ev-stat { @apply flex flex-col bg-white px-2 py-1.5; }
+.ev-stat span { @apply text-[9.5px] uppercase tracking-wide text-slate-400; }
+.ev-stat b { @apply text-[13px] tabular-nums text-slate-800; }
+.ev-note { @apply px-3 pt-2 text-[11.5px]; }
+.ev-block { @apply px-3 pt-2; }
+.ev-block-title { @apply text-[10px] font-semibold uppercase tracking-wider text-slate-500; }
+.ev-block p { @apply m-0 mt-0.5 text-[11.5px] leading-relaxed text-slate-700; }
+.ev-src { @apply px-3 py-2 text-[10px] text-slate-400; }
